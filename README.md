@@ -8,10 +8,9 @@ So the first step is downgrade iDrac to version 4.40.10.00, then downgrade to ve
 https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-failures-rac0181<br>
 Then use fanpseed.sh to adjust fan speed according to GPU temprature.<br>
 
-This script depend on nvidia-smi, datamash, ipmitool.
+This script depend on nvidia-smi, ipmitool.
 
 nvidia-smi is used to get all GPUs' temprature.<br>
-datamash is used to get the max temprature from all cards.<br>
 ipmitool is used to send the fan adjustment command.<br>
 ipmitool raw 0x30 0x30 0x01 0x00 # adjust fan speed by iDrac<br>
 ipmitool raw 0x30 0x30 0x01 0x01 # adjust fan speed manually<br>
@@ -31,10 +30,9 @@ iDrac版本大于3.30.30.30时无法手动调整风扇转速<br>
 https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-failures-rac0181<br>
 然后用脚本fanpseed.sh根据GPU温度调整风扇转速.<br>
 
-这个脚本有以下依赖：nvidia-smi, datamash, ipmitool.
+这个脚本有以下依赖：nvidia-smi, ipmitool.
 
 nvidia-smi用来读取所有GPU的温度.<br>
-datamash用来找到多卡的最高温度.<br>
 ipmitool用来发送调整转速命令.<br>
 ipmitool raw 0x30 0x30 0x01 0x00 # iDrac控制转速<br>
 ipmitool raw 0x30 0x30 0x01 0x01 # 用户控制转速<br>
