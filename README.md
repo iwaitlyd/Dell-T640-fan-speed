@@ -8,7 +8,7 @@ So the first step is downgrade iDrac to version 4.40.10.00, then downgrade to ve
 https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-failures-rac0181<br>
 Then use fanpseed.sh to adjust fan speed according to GPU temprature.<br>
 
-This script depend on nvidia-smi, ipmitool.
+This script depends on nvidia-smi, ipmitool.
 
 nvidia-smi is used to get GPU temprature.<br>
 ipmitool is used to send the fan adjustment command.<br>
