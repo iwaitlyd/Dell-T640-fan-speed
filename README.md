@@ -12,8 +12,8 @@ This script depend on nvidia-smi, ipmitool.
 
 nvidia-smi is used to get GPU temprature.<br>
 ipmitool is used to send the fan adjustment command.<br>
-ipmitool raw 0x30 0x30 0x01 0x00 # adjust fan speed by iDrac<br>
-ipmitool raw 0x30 0x30 0x01 0x01 # adjust fan speed manually<br>
+ipmitool raw 0x30 0x30 0x01 0x01 # fan speed controlled by iDrac<br>
+ipmitool raw 0x30 0x30 0x01 0x00 # fan speed controlled manually<br>
 ipmitool raw 0x30 0x30 0x02 0xff 0x64 #change fan speed, the last byte 0x64 mean 100% fan speed, 0x00 means 0% fan speed.
 
 Enjoy!
@@ -34,8 +34,8 @@ https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-fai
 
 nvidia-smi用来获取GPU的温度.<br>
 ipmitool用来发送调整转速命令.<br>
-ipmitool raw 0x30 0x30 0x01 0x00 # iDrac控制转速<br>
-ipmitool raw 0x30 0x30 0x01 0x01 # 用户控制转速<br>
+ipmitool raw 0x30 0x30 0x01 0x01 # iDrac控制转速<br>
+ipmitool raw 0x30 0x30 0x01 0x00 # 手动控制转速<br>
 ipmitool raw 0x30 0x30 0x02 0xff 0x64 #设置转速, 最后字节0x64是100%转速, 0x00是0%转速.
 
 Enjoy!
