@@ -28,7 +28,7 @@ do
  fi
 
  #get max temprature of GPUs
- TEMP=$( nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader | datamash max 1)
+ TEMP=$( nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader | sort | tail -n 1 )
 #echo $PREV_TEMP
 #echo $TEMP
 
