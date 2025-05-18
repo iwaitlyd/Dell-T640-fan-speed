@@ -6,11 +6,11 @@ Dell T640 fans run at max speed when unauthorized GPU (e.g. 3090) is installed. 
 Manual fan speed adjustment is NOT available when iDrac version > 3.30.30.30<br>
 So the first step is downgrade iDrac to version 4.40.10.00, then downgrade to version 3.30.30.30.<br>
 https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-failures-rac0181<br>
-Then use fanpseed.sh to adjust fan speed according to GPU temprature.<br>
+Then use fanpseed.sh to adjust fan speed according to GPU temperature.<br>
 
 This script depends on nvidia-smi, ipmitool.
 
-nvidia-smi is used to get GPU temprature.<br>
+nvidia-smi is used to get GPU temperature.<br>
 ipmitool is used to send the fan adjustment command.<br>
 ipmitool raw 0x30 0x30 0x01 0x01 # fan speed controlled by iDrac<br>
 ipmitool raw 0x30 0x30 0x01 0x00 # fan speed controlled manually<br>
@@ -18,7 +18,7 @@ ipmitool raw 0x30 0x30 0x02 0xff 0x64 #change fan speed, the last byte 0x64 mean
 
 Enjoy!
 
-Referrence: https://www.bilibili.com/opus/826964861583884344
+Reference: https://www.bilibili.com/opus/826964861583884344
 
 # Dell-T640-风扇速度
 戴尔T640安装未授权GPU(如3090等)时，调整风扇速度
