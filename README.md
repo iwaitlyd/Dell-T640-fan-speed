@@ -10,7 +10,7 @@ Then use fanpseed.sh to adjust fan speed according to GPU temprature.<br>
 
 This script depend on nvidia-smi, ipmitool.
 
-nvidia-smi is used to get all GPUs' temprature.<br>
+nvidia-smi is used to get GPU temprature.<br>
 ipmitool is used to send the fan adjustment command.<br>
 ipmitool raw 0x30 0x30 0x01 0x00 # adjust fan speed by iDrac<br>
 ipmitool raw 0x30 0x30 0x01 0x01 # adjust fan speed manually<br>
@@ -32,7 +32,7 @@ https://www.dell.com/support/kbdoc/en-us/000190151/idrac9-firmware-downgrade-fai
 
 这个脚本有以下依赖：nvidia-smi, ipmitool.
 
-nvidia-smi用来读取所有GPU的温度.<br>
+nvidia-smi用来获取GPU的温度.<br>
 ipmitool用来发送调整转速命令.<br>
 ipmitool raw 0x30 0x30 0x01 0x00 # iDrac控制转速<br>
 ipmitool raw 0x30 0x30 0x01 0x01 # 用户控制转速<br>
